@@ -1,94 +1,27 @@
-body {
-  background-color: hsl(30, 38%, 92%);
-}
-
-.card {
-  margin: 0 auto;
-  overflow: hidden;
-  max-height: 500px;
-  max-width: 650px;
-  border-radius: 10px;
+.buttons {
   display: flex;
-  flex-direction: row;
-    &__image {
-      img {
-        object-fit: contain;
-        height: 500px;
-      }
-    }
-    &__body {
-      padding: 35px;
-      background: hsl(0, 0%, 100%);
-    }
-    &__category {
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 500;
-      font-size: 14px;
-      letter-spacing: 7px;
-      color: hsl(228, 12%, 48%);
-      padding-bottom: 20px;
-    }
-    &__title {
-      font-family: 'Fraunces', serif;
-      font-weight: 700;
-      font-size: 38px;
-      line-height: 1;
-    }
-    &__paragraph {
-      max-width: 95%;
-      padding-top: 1.5rem;
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 500;
-      font-size: 14px;
-      color: hsl(228, 12%, 48%);
-      line-height: 23px;
-    }
-    &__price {
-      display: flex;
-      flex-direction: row;
-      gap: 20px;
-      align-items: center;
-        &-current {
-          color: hsl(158, 36%, 37%);
-          font-family: 'Fraunces', serif;
-          font-weight: 700;
-          font-size: 2.5rem;
-        }
-        &-default {
-          color: hsl(228, 12%, 48%);
-          text-decoration: line-through;
-          font-family: 'Montserrat', sans-serif;
-          font-weight: 500;
-        }
-    }
-    &__button {
-      background-color: hsl(158, 36%, 37%);
-      height: 3rem;
+  flex-wrap: wrap;
+  gap: 10px;
+    a {
+      background: rgb(165, 165, 243);
+      padding: 10px;
       border-radius: 10px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: hsl(0, 0%, 100%);
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 700;
-        p {
-          margin-left: 10px;
-        } 
-  }
+      text-decoration: none;
+      color: black;
+    }
 }
 
-@media only screen and (max-width: 700px) {
-  .card {
-    flex-direction: column;
-    max-height: 1000px;
-    max-width: 375px;
-    &__image {
-      max-height: 275px;
-      object-fit: cover;
-      img {
-        max-height: 275px;
-        object-position: top;
-      }
+.container {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: black;
+  padding: 10px;
+  border-radius: 10px;
+  &__button {
+    a {
+      text-decoration: none;
+      color: white;
     }
   }
 }

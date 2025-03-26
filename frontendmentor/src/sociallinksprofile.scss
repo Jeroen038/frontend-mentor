@@ -1,0 +1,90 @@
+// Variables 
+$green:hsl(75, 94%, 57%);
+$white:hsl(0, 0%, 100%);
+$grey-700:hsl(0, 0%, 20%);
+$grey-800:hsl(0, 0%, 12%);
+$grey-900:hsl(0, 0%, 8%);
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+$font-family: 'Embled', sans-serif;
+//
+
+body {
+    background-color: $grey-900;
+    font-family: $font-family;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    background-color: $grey-800;
+    width: 325px;
+    padding: 2.5rem;
+    margin: 3rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+    &__image {
+        width: 100px;
+        min-height: 100px;
+        border-radius: 100%;
+        margin: 0 0 30px 0;
+        overflow: hidden;
+        img {
+            width: 100px;
+            height: 100px;
+        }
+    }
+    &__body {
+        color: $white;
+        width: 100%;
+    }
+    &__name {
+        font-size: 24px;
+        font-weight: 600;
+    }
+    &__location {
+        color: $green;
+        padding: 10px 0 0 0;
+        font-weight: 700;
+        font-size: 14px;
+    }
+    &__quote {
+        color: $white;
+        padding: 2rem 0 2rem 0;
+    }
+    &__buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        a {
+            width: 100%;
+            background: $grey-700;
+            border-radius: 10px;
+            color: $white;
+            text-decoration: none;
+            text-align: center;
+            font-weight: 600;
+            font-size: 14px;
+            padding: 15px 0;
+            transition: ease-in-out 0.2s;
+            &:hover {
+                background: $green;
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 700px) {
+    body {
+        align-items: center;
+    }
+    .card {
+        padding: 1rem;
+        margin: 0;
+    }
+}
