@@ -1,0 +1,112 @@
+//Variables
+$cyan: hsl(185, 75%, 39%);
+$darkblue: hsl(229, 23%, 23%);
+$grayblue: hsl(227, 10%, 46%);
+$darkgray: hsl(0, 0%, 45%);
+$font-family: 'Inter', sans-serif;
+//Fonts
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kumbh+Sans:wght@100..900&display=swap');
+
+body {
+    font-family: $font-family;
+    background: $cyan;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.bg-pattern-top {
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+    left: -300px;
+}
+
+.bg-pattern-bottom {
+    position: absolute;
+    top: 100px;
+    right: -300px;
+    z-index: -1;
+}
+
+p{
+    margin: 0;
+}
+
+.card {
+    max-width: 350px;
+    margin: 0 auto;
+    margin-top: 10rem;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    overflow: hidden;
+    &__header {
+        position: relative;
+        background-repeat: no-repeat;
+        height: 140px
+    }
+    &__image {
+        position: absolute;
+        top: 85px;
+        left: 120px;
+        overflow: hidden;
+        border-radius: 50%;
+        border: 5px solid white;
+        width: 96px;
+        height: 96px;
+    }
+    &__body {
+        background: white;
+        margin: 0;
+        padding: 0;
+    }
+    &__info {
+        padding-top: 4rem;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        justify-content: center;
+    }
+    &__name {
+        font-weight: 700;
+        font-size: 1.3rem;
+    }
+    &__age {
+        color: $darkgray;
+        font-size: 1.3rem;
+    }
+    &__country {
+        text-align: center;
+        padding: 15px 0;
+        color: $darkgray;
+    }
+    &__bottom {
+        border-top: 1px solid rgba(128, 128, 128, 0.356);
+        background: white;
+        margin: 0;
+        padding: 0;
+    }
+    &__items {
+        display: flex;
+        flex-direction: row;
+        padding: 2rem;
+        justify-content: space-between;
+        .item {
+            width: 70px;
+            text-align: center;
+            &__number {
+                font-weight: 700;
+                font-size: 1.3rem;
+                padding-bottom: 5px;
+            }
+        
+            &__label {
+                font-weight: 300;
+                font-size: 0.7rem;
+                letter-spacing: 2px;
+                color: $darkgray;
+            }
+        }
+    }
+}
