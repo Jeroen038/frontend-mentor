@@ -1,0 +1,132 @@
+//Variabels 
+$purple:hsl(259, 100%, 65%);
+$lightred:hsl(0, 100%, 67%);
+$white:hsl(0, 0%, 100%);
+$offwhite:hsl(0, 0%, 94%);
+$lightgrey:hsl(0, 0%, 86%);
+$smokegrey:hsl(0, 1%, 44%);
+$offblack:hsl(0, 0%, 8%);
+$inputs: 32px;
+//Fonts
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kumbh+Sans:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+$font-family: 'Poppins', sans-serif;
+
+body {
+    font-family: $font-family;
+    background: $offwhite;
+    margin: 0 auto;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper {
+    height: 80vh;
+    width: 70vw;
+    padding: 1rem 1rem 0px 2rem;
+    display: flex;
+    justify-content: center;
+    &__calculator {
+        width: 60%;
+        background-color: $white;
+        padding: 50px;
+        border-radius: 20px;
+        border-bottom-right-radius: 100px;
+    }
+    &__input {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+    }
+    &__label {
+        letter-spacing: 3px;
+        font-size: 8px;
+        font-weight: 700;
+        color: $smokegrey;
+    }
+    &__text {
+        border: 1px solid gray;
+        border-radius: 5px;
+        padding: 10px;
+        width: 70px;
+        height: 20px;
+    }
+    input[type=text] {
+        font-weight: 900;
+        font-size: 20px;
+    }
+    &__submit {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__line {
+        flex-grow: 1;
+        height: 1px;
+        background-color: $lightgrey;
+        border: none;
+        margin-right: 1rem;
+    }
+    &__button {
+        background-color: $purple;
+        border-radius: 50%;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        padding: 10px;
+    }
+    &__output {
+        display: flex;
+        flex-direction: column;
+    }
+    &__output-value {
+        color: $purple;
+        font-weight: 900;
+        font-size: 55px;
+    }
+    &__output-label {
+        font-weight: 900;
+        font-size: 50px;
+        font-style: italic;
+    }
+
+}
+
+
+@media only screen and (max-width: 700px) {
+    body {
+        overflow:auto;
+        padding: 0;
+        margin: 0;
+    }
+    .wrapper {
+        &__calculator {
+            height: 22rem;
+            max-width: 22rem;
+            margin: 0;
+            padding: 15px;
+        }
+        &__output-value {
+            font-size: 45px;
+        }
+        &__output-label {
+            font-size: 40px;
+        }
+        &__submit {
+            position: relative;
+            margin: 50px 0;
+        }
+        &__button {
+            position: absolute;
+        }
+    }
+}

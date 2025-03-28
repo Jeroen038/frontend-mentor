@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <title>FAQ</title>
+    <link rel="stylesheet" href="src/faq.scss">
+    <script src="src/faq.js"></script>
+  </head>
+  <body>
+      <div class="container">
+         <!-- <img src="/images/faq-background-pattern-desktop.svg" alt=""> -->
+        <div class="container__wrapper">
+            <div class="container__header">
+                <div class="container__title">
+                    <img src="/images/faq-icon-star.svg" alt="">
+                    <h1>FAQs</h1>
+                </div>
+            </div>
+            <div class="container__question-wrapper">
+                <hr>
+                <div class="container__question" x-data="{ isOpen: false }">
+                    <div class="container__text">
+                        <div class="container__subtitle">
+                            <h2>What is Frontend Mentor, and how will it help me?</h2>
+                            <button @click="isOpen = !isOpen" class="faq-button">
+                                <img src="/images/faq-icon-plus.svg" alt="Open" x-show="!isOpen" x-cloak>
+                                <img src="/images/faq-icon-minus.svg" alt="Sluit" x-show="isOpen" x-cloak>
+                            </button>
+                        </div>
+                        <div class="container__paragraph" x-show="isOpen">
+                            <p>Frontend Mentor offers realistic coding challenges to help developers improve their frontend coding skills with projects in HTML, CSS, and JavaScript. It's suitable for all levels and ideal for portfolio building.</p>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="container__question" x-data="{ isOpen: false }">
+                    <div class="container__text">
+                        <div class="container__subtitle">
+                            <h2>Is Frontend Mentor free?</h2>
+                            <button @click="isOpen = !isOpen" class="faq-button">
+                                <img src="/images/faq-icon-plus.svg" alt="Open" x-show="!isOpen" x-cloak>
+                                <img src="/images/faq-icon-minus.svg" alt="Sluit" x-show="isOpen" x-cloak>
+                            </button>
+                        </div>
+                        <div class="container__paragraph" x-show="isOpen">
+                            <p>Frontend Mentor offers realistic coding challenges to help developers improve their frontend coding skills with projects in HTML, CSS, and JavaScript. It's suitable for all levels and ideal for portfolio building.</p>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="container__question" x-data="{ isOpen: false }">
+                    <div class="container__text">
+                        <div class="container__subtitle">
+                            <h2>Can I use Frontend Mentor projects in my portfolio?</h2>
+                            <button @click="isOpen = !isOpen" class="faq-button">
+                                <img src="/images/faq-icon-plus.svg" alt="Open" x-show="!isOpen" x-cloak>
+                                <img src="/images/faq-icon-minus.svg" alt="Sluit" x-show="isOpen" x-cloak>
+                            </button>
+                        </div>
+                        <div class="container__paragraph" x-show="isOpen">
+                            <p>Frontend Mentor offers realistic coding challenges to help developers improve their frontend coding skills with projects in HTML, CSS, and JavaScript. It's suitable for all levels and ideal for portfolio building.</p>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="container__question" x-data="{ isOpen: false }">
+                    <div class="container__text">
+                        <div class="container__subtitle">
+                            <a href="/"><h2>Klik op deze tekst om terug te gaan naar index</h2></a>
+                            <button @click="isOpen = !isOpen" class="faq-button">
+                                <img src="/images/faq-icon-plus.svg" alt="Open" x-show="!isOpen" x-cloak>
+                                <img src="/images/faq-icon-minus.svg" alt="Sluit" x-show="isOpen" x-cloak>
+                            </button>
+                        </div>
+                        <div class="container__paragraph" x-show="isOpen">
+                            <p>Frontend Mentor offers realistic coding challenges to help developers improve their frontend coding skills with projects in HTML, CSS, and JavaScript. It's suitable for all levels and ideal for portfolio building.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>
+  </body>
+</html>
